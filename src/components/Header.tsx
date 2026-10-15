@@ -9,6 +9,7 @@ const LINKS = [
   { href: '/', label: 'Accueil', match: [] as string[] },
   { href: '/comprendre', label: 'Comprendre', match: ['/comprendre', '/developpement-durable', '/rse', '/normes', '/glossaire', '/mise-en-oeuvre'] },
   { href: '/apprentissage', label: 'S’entraîner', match: ['/apprentissage'] },
+  { href: '/contact', label: 'Contact', match: [] as string[] },
 ];
 
 export function Logo() {

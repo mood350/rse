@@ -7,6 +7,7 @@ export default function Footer() {
     ['Passer à l’action', '/mise-en-oeuvre'],
     ['S’entraîner', '/apprentissage'],
     ['Glossaire', '/glossaire'],
+    ['Contact', '/contact'],
   ];
   return (
     <footer className="site-footer">
