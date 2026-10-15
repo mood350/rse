@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { PHOTOS } from '@/data/photos';
 
 export default function Footer() {
-  const credits = Array.from(new Set(Object.values(PHOTOS).map((p) => p.credit)));
   const links = [
     ['Accueil', '/'],
     ['Comprendre', '/comprendre'],
@@ -32,9 +30,6 @@ export default function Footer() {
         <div className="foot-word" aria-hidden="true">Miabôh</div>
         <div className="foot-bottom">
           <span>© {new Date().getFullYear()} Tous droits réservés.</span>
-          <span className="foot-small">
-            Photos libres de droits via <a href="https://unsplash.com" target="_blank" rel="noreferrer">Unsplash</a> : {credits.join(', ')}.
-          </span>
         </div>
       </div>
     </footer>
