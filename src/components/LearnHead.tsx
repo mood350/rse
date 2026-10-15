@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { HeroFx, SplitTitle } from './HeroFx';
 
 export default function LearnHead({
   crumbs,
@@ -14,6 +15,7 @@ export default function LearnHead({
 }) {
   return (
     <header className="simple-head">
+      <HeroFx />
       <div className="container narrow">
         {crumbs && (
           <nav className="crumbs" aria-label="Fil d’Ariane">
@@ -25,8 +27,8 @@ export default function LearnHead({
             ))}
           </nav>
         )}
-        <h1>{title}</h1>
-        {lead && <p className="lead">{lead}</p>}
+        <SplitTitle text={title} />
+        {lead && <p className="lead hero-lead">{lead}</p>}
         {children}
       </div>
     </header>

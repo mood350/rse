@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import Photo from './Photo';
+import { HeroFx, SplitTitle } from './HeroFx';
 import type { PhotoKey } from '@/data/photos';
 
 export default function PageHero({
@@ -23,13 +24,14 @@ export default function PageHero({
       <div className="bg">
         <Photo name={photo} width={1800} priority />
       </div>
+      <HeroFx />
       <div className="container">
         <div className="crumbs">
           <Link href="/">Accueil</Link> / {crumb}
         </div>
-        <span className="eyebrow" style={{ color: '#f4b400' }}>{eyebrow}</span>
-        <h1>{title}</h1>
-        <p className="lead">{lead}</p>
+        <p className="hero-kicker">{eyebrow}</p>
+        <SplitTitle text={title} />
+        <p className="lead hero-lead">{lead}</p>
         {children}
       </div>
     </section>
